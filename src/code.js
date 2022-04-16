@@ -11,7 +11,7 @@ let graph;
 
 
 // load the data
-d3.json("src/json1.json", function(error, _graph) {
+d3.json("./src/json1.json", function(error, _graph) {
     if (error) throw error;
     graph = _graph;
     initializeDisplay();
@@ -251,5 +251,5 @@ function spreading() {
     }
 }
 
-
-window.onclick = setInterval(spreading, 2000);
+setInterval(spreading, 2000);
+//window.onclick = spreading;
